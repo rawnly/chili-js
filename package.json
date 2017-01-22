@@ -2,7 +2,14 @@
   "name": "chili-js",
   "version": "1.2.0",
   "main": "chili.js",
-  "author": "Rawnly <fedevitale99@gmail.com>",
+  "description": "A collection of nodeJS shortcuts",
+  "author": "Rawnly <fedevitale99@gmail.com> (http://rawnly.com)",
   "license": "MIT",
-  "description": "A collection of nodeJS shortcuts"
+  "keywords": [
+    "chili",
+    "js",
+    "tool",
+    "shortcut",
+    "shorthands"
+  ]
 }
