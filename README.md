@@ -5,12 +5,12 @@ Usefuls variables for node env.
 ## Install
 **NPM**
 ```bash
-  $ [sudo] npm install chili-js --save
+  $ npm install chili-js --save
 ```
 
 **Yarn**
 ```bash
-  $ [sudo] yarn add chili-js
+  $ yarn add chili-js
 ```
 
 ## Features / API
@@ -20,20 +20,19 @@ Type: `function` <br>
 Input: `String` <br>
 *Example*:
 ```js
-  require('chili-js');
   join('path', 'to', 'file')
   //=> 'path/to/file'
 ```
 
 ### Console Shortcuts
-#### log | warn | error
+#### log | warn | err
 
 Type: `function`
 Example:
 ```js
   log('Hello') //=> 'Hello'
   warn('Warning!') //=> 'Warning!'
-  error('There is an error!') //=> 'There is an error!'
+  err('There is an error!') //=> 'There is an error!'
 ```
 
 ### FS Shortcuts
@@ -50,7 +49,6 @@ Example:
 ```
 
 ### Variables
-
 ```js
   // Get user main folder
   home //=> /Users/<username>/
@@ -69,4 +67,4 @@ Example:
   printArray(['my', 'array']) //=> will log all array items
 ```
 
-<h3 align="center"> Made with love by Rawnly </h3>
+<h3 align="center"> Made with ❤️ by <a href="http://rawnly.com">Rawnly</a> </h3>
