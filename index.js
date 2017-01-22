@@ -23,11 +23,20 @@ module.exports = readSync = fs.readFileSync
 module.exports = home = os.homedir()
 module.exports = user = home.split('/')[home.split('/').length - 1]
 
-module.exports = capitalize = (str) => {
-  var cap = str.charAt(0).toUpperCase() + str.slice(1, str.length)
-  return cap
+// Capitalize
+module.exports = String.prototype.capitalize = function(divider = ' ', joiner = divider) {
+  var cap_str = [];
+
+  this.toLowerCase().split(divider).forEach( item => {
+    item = item.charAt(0).toUpperCase() + item.slice(1, item.length)
+    cap_str.push(item)
+  })
+
+  return cap_str.join(joiner)
 }
 
+
+// Print
 module.exports = print = (array) => {
   array.forEach((item) => {
     console.log(item)
