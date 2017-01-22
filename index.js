@@ -5,6 +5,14 @@ module.exports = os = require('os')
 
 // path.join() shorthand
 module.exports = join = path.join
+module.exports = parse = path.parse
+module.exports = normalize = path.normalize
+module.exports = relative_path = path.relative
+module.exports = separator = path.sep
+
+// JSON
+module.exports = jparse = JSON.parse
+module.exports = jstringify = JSON.stringify
 
 // Various console commands
 module.exports = log = console.log
@@ -35,10 +43,6 @@ module.exports = String.prototype.capitalize = function(divider = ' ', joiner = 
   return cap_str.join(joiner)
 }
 
-
-// Print
-module.exports = print = (array) => {
-  array.forEach((item) => {
-    console.log(item)
-  })
+module.exports = String.prototype.relativeTo = function(path) {
+  return relative_path(this.toString(), path)
 }

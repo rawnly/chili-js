@@ -15,56 +15,59 @@ Usefuls variables for node env.
 
 ## Features / API
 
-### Join(string)
-Type: `function` <br>
-Input: `String` <br>
-*Example*:
-```js
-  join('path', 'to', 'file')
-  //=> 'path/to/file'
-```
+### Path
+- #### Shortcuts
+  * `path.join()` **=>** `join()`
+  * `path.parse()` **=>** `parse()`
+  * `path.normalize()` **=>** `normalize()`
+  * `path.relative()` **=>** `relative_path()`
+  * `path.sep` **=>** `separator`
 
-### Console Shortcuts
-#### log | warn | err
+- #### Functions
+ * `String.prototype.relativeTo()`
+It returns `path.relative(pth1, pth2)` as `pth1.relativeTo(pth2)`
 
-Type: `function`
-Example:
-```js
-  log('Hello') //=> 'Hello'
-  warn('Warning!') //=> 'Warning!'
-  err('There is an error!') //=> 'There is an error!'
-```
+    ```js
+      require('chili-js');
 
+      join( home, 'Desktop', 'myFolder' ).relativeTo( join(home, 'Documents') );
+      //=> ../../Documents
+    ```
+---
+### JSON Shortcuts
+- `JSON.jparse()` **=>** `jparse()`
+- `JSON.jstringify()` **=>** `jstringify()`
+
+---
+### Console Shortcuts
+- `console.log()`   **=>** `log()`
+- `console.warn()`  **=>** `warn()`
+- `console.error()` **=>** `err()`
+
+
+---
 ### FS Shortcuts
-Type: `function`
-Example:
-```js
-  // FS read & write | Async
-  write(filename, text, callback())
-  writeSync(filename, text)
+- `fs.writeFile()` **=>** `write()`
+- `fs.writeFileSync()` **=>** `writeSync()`
+- `fs.readFile()` **=>** `read()`
+- `fs.readFileSync()` **=>** `readSync()`
 
-  // FS read & write | Sync
-  read(filename, callback())
-  readSync(filename)
-```
+
+---
+
 
 ### Variables
-```js
-  // Get user main folder
-  home //=> /Users/<username>/
-
-  // Get Username
-  user //=> <username>
-```
+`home` who is the `/Users/<user>/` (`~` path)
+and `user` who is the `<user>` in `~` path.
 
 ### Standalone Functions
-* `capitalize(string)`
-```js
-  capitalize('hello') //=> 'Hello'
-```
-* `printArray(array)`
-```js
-  printArray(['my', 'array']) //=> will log all array items
-```
+- `String.prototype.capitalize(divider, joiner)`
 
+  ```js
+    'hello world'.capitalize() //=> 'Hello World'
+    'hellow-world'.capitalize('-') //=> 'Hello-World'
+    'hellow-world'.capitalize('-', ' ') //=> 'Hello World'
+  ```
+
+  ---
 <h3 align="center"> Made with ❤️ by <a href="http://rawnly.com">Rawnly</a> </h3>
