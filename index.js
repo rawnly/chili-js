@@ -43,6 +43,27 @@ module.exports = String.prototype.capitalize = function(divider = ' ', joiner = 
   return cap_str.join(joiner)
 }
 
+// relative path
 module.exports = String.prototype.relativeTo = function(path) {
   return relative_path(this.toString(), path)
+}
+
+// Sum all array items (Must be number)
+module.exports = Array.prototype.sum = function() {
+  let counter = [];
+
+  this.forEach((item) => {
+    if (typeof item != 'number') {
+      item = 0;
+      counter.push(item)
+    } else {
+      item = Number(item);
+      counter.push(item)
+    }
+  });
+
+  return counter.reduce((a, b) => {
+    return a + b;
+  }, 0);
+
 }
