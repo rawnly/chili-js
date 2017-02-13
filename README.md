@@ -63,10 +63,36 @@ and `user` who is the `<user>` in `~` path.
 ### Standalone Functions
 - `String.prototype.capitalize(divider, joiner)`
 
+  This function provides to `capitalize` a word.
   ```js
+  ...
     'hello world'.capitalize() //=> 'Hello World'
-    'hellow-world'.capitalize('-') //=> 'Hello-World'
-    'hellow-world'.capitalize('-', ' ') //=> 'Hello World'
+  ```
+  It can also parse a word
+  ```js
+  ...
+    'hello-world'.capitalize('-') //=> 'Hello-World'
+    'hello-world'.capitalize('-', ' ') //=> 'Hello World'
+    'hello world'.capitalize(' ', '-')
+    //=> Hello-World
+  ```
+
+- `Array.prototype.sum()`
+
+  This function provides to `sum` all items in array
+
+  ```js
+  ...
+    [1, 2, 3].sum()
+    //=> 6
+  ```
+
+  If an item in `array` is not a number it will be ignored.
+
+  ```js
+  ...
+    ['a', 15, 'b', 5, 'c'].sum()
+    //=> 20
   ```
 
   ---
