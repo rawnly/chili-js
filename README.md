@@ -1,5 +1,7 @@
 # ChiliJs
 
+![badge](http://rawnly.com/badges/powered.svg)(rawnly.com/badges) 
+
 Usefuls variables for node env.
 
 ## Install
